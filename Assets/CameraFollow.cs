@@ -6,8 +6,8 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public float smothing;
 
-    public Vector2 maxPose;
-    public Vector2 minPose;
+    //public Vector2 maxPose;
+    //public Vector2 minPose;
 
     private void FixedUpdate()
     {
