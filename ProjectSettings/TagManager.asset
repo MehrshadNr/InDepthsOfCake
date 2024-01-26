@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - FirePos
+  - Kerm
   layers:
   - Default
   - TransparentFX
