@@ -970,7 +970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5660616662869481394, guid: 09d00d030bc854b4abb8ef8fae97cc55, type: 3}
   Player: {fileID: 674336468}
-  time: 40
+  temp: 0
+  temp2: 5
 --- !u!4 &662053682
 Transform:
   m_ObjectHideFlags: 0
@@ -1453,7 +1454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5660616662869481394, guid: 09d00d030bc854b4abb8ef8fae97cc55, type: 3}
   Player: {fileID: 674336468}
-  time: 40
+  temp: 0
+  temp2: 5
 --- !u!4 &1137876800
 Transform:
   m_ObjectHideFlags: 0
@@ -2009,7 +2011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5660616662869481394, guid: 09d00d030bc854b4abb8ef8fae97cc55, type: 3}
   Player: {fileID: 674336468}
-  time: 40
+  temp: 0
+  temp2: 5
 --- !u!4 &1533626627
 Transform:
   m_ObjectHideFlags: 0
@@ -3576,8 +3579,24 @@ PrefabInstance:
       value: www
       objectReference: {fileID: 0}
     - target: {fileID: 7977196476159183626, guid: a4be2db2c5ab7bb4a9598d54cc1c577f, type: 3}
+      propertyPath: force
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977196476159183626, guid: a4be2db2c5ab7bb4a9598d54cc1c577f, type: 3}
+      propertyPath: amuntOfBullet
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977196476159183626, guid: a4be2db2c5ab7bb4a9598d54cc1c577f, type: 3}
       propertyPath: MultiplyBullet
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977196476159183626, guid: a4be2db2c5ab7bb4a9598d54cc1c577f, type: 3}
+      propertyPath: MultiplyGunforce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977196476159183626, guid: a4be2db2c5ab7bb4a9598d54cc1c577f, type: 3}
+      propertyPath: timeBetweenFiring
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

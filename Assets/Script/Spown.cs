@@ -6,14 +6,12 @@ public class Spown : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject Player;
-    public float time;
-     float temp;
-     float temp2;
+     float time = 1;
+    public float temp;
+    public float temp2;
 
     private void Start()
     {
-        temp = time;
-        temp2 = time;
     }
     private void Update()
     {

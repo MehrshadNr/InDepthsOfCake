@@ -18,9 +18,9 @@ public class MenuSystem : MonoBehaviour
     void Start()
     {
         MenuCanvas.SetActive(true);
-        StartGameCanvas.SetActive(false);
+        //StartGameCanvas.SetActive(false);
         CreditCanvas.SetActive(false);
-        OptionCanvas.SetActive(false);
+        //OptionCanvas.SetActive(false);
 
     }
     private void Update()
@@ -37,9 +37,9 @@ public class MenuSystem : MonoBehaviour
     public void _StartGameCanvas()
     {
         MenuCanvas.SetActive(false);
-        StartGameCanvas.SetActive(true);
+        //StartGameCanvas.SetActive(true);
         CreditCanvas.SetActive(false);
-        OptionCanvas.SetActive(false);
+        //OptionCanvas.SetActive(false);
     }
     public void _CreditCanvas()
     {
