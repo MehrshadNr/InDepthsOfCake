@@ -30,9 +30,9 @@ public class MenuSystem : MonoBehaviour
     public void _MenuCanvas()
     {
         MenuCanvas.SetActive(true);
-        StartGameCanvas.SetActive(false);
+       // StartGameCanvas.SetActive(false);
         CreditCanvas.SetActive(false);
-        OptionCanvas.SetActive(false);
+       // OptionCanvas.SetActive(false);
     }
     public void _StartGameCanvas()
     {
@@ -44,16 +44,16 @@ public class MenuSystem : MonoBehaviour
     public void _CreditCanvas()
     {
         MenuCanvas.SetActive(false);
-        StartGameCanvas.SetActive(false);
+        //StartGameCanvas.SetActive(false);
         CreditCanvas.SetActive(true);
-        OptionCanvas.SetActive(false);
+        //OptionCanvas.SetActive(false);
     }
     public void _OptionCanvas()
     {
-        MenuCanvas.SetActive(false);
-        StartGameCanvas.SetActive(false);
+       MenuCanvas.SetActive(false);
+        //StartGameCanvas.SetActive(false);
         CreditCanvas.SetActive(false);
-        OptionCanvas.SetActive(true);
+       // OptionCanvas.SetActive(true);
     }
     public void Quit()
     {
