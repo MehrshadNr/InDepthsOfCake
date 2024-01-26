@@ -18,28 +18,29 @@ public class AiChase : MonoBehaviour
 
     private void Update()
     {
-        if (canMove)
+        if(player != null)
         {
-            if(player != null)
+            if (canMove)
             {
+
                 distance = Vector2.Distance(transform.position, player.transform.position);
-            }
-            Vector2 direction = player.transform.position - transform.position;
+                Vector2 direction = player.transform.position - transform.position;
 
-            if(!retreat)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            }
-            else
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, -transform.position, 20 * Time.deltaTime);
-            }
+                if (!retreat)
+                {
+                    transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(this.transform.position, -transform.position, 20 * Time.deltaTime);
+                }
 
 
-            Vector2 targetDirection = player.transform.position - transform.position;
-            float angle = math.atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90;
-            Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotateSpeed);
+                Vector2 targetDirection = player.transform.position - transform.position;
+                float angle = math.atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90;
+                Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotateSpeed);
+            }
         }
     }
 
