@@ -27,6 +27,9 @@ public class ShootingSystem : MonoBehaviour
     public float ofset;
     public float spread;
 
+    //public AudioSource audioSource;
+    //public AudioClip audio;
+
     private void Start()
     {
         minCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -54,7 +57,9 @@ public class ShootingSystem : MonoBehaviour
         // Shooting
         if (Input.GetMouseButton(0) && canFire)
         {
-            if(MultiplyBullet)
+            //audioSource.clip = audio;
+            //audioSource.Play();
+            if (MultiplyBullet)
             {
                 _MultiplyBullet();
                 canFire = false;

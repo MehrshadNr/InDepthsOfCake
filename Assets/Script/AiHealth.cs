@@ -6,6 +6,8 @@ public class AiHealth : MonoBehaviour
 {
     public float maxHealth;
     public float hp;
+    public AudioSource audioSource;
+    public AudioClip audio;
     private void Start()
     {
             hp = maxHealth;
@@ -14,7 +16,9 @@ public class AiHealth : MonoBehaviour
     {
             if (hp == 0)
             {
-                Destroy(gameObject);
+                 audioSource.clip = audio;
+                 audioSource.Play();
+            Destroy(gameObject);
             }
     }
     public void TakeDamage(float damage)
