@@ -21,9 +21,6 @@ public class UiManager : MonoBehaviour
 
     public void End()
     {
-        audioSource.clip = audio;
-        audioSource.Play();
-        aaudioSource.SetActive(false);
         //animator.enabled = true;
     }
 }

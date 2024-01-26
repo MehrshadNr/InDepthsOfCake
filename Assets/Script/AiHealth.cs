@@ -16,8 +16,8 @@ public class AiHealth : MonoBehaviour
     {
             if (hp == 0)
             {
-                 audioSource.Play();
-            Destroy(gameObject);
+               //  audioSource.Play();
+           // Destroy(gameObject);
             }
     }
     public void TakeDamage(float damage)
