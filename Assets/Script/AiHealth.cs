@@ -16,7 +16,6 @@ public class AiHealth : MonoBehaviour
     {
             if (hp == 0)
             {
-                 audioSource.clip = audio;
                  audioSource.Play();
             Destroy(gameObject);
             }
