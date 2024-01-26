@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 280591784}
-  seconds: 10
-  minutes: 0
+  seconds: 0
+  minutes: 1
   temp: 2
 --- !u!114 &280591784
 MonoBehaviour:
@@ -2212,7 +2212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 11cdafe703b446d4d9f05cf43ef08d50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7c18ecffd50c06438f992b53afdab4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3267,7 +3267,6 @@ SceneRoots:
   - {fileID: 6270616789589445041}
   - {fileID: 6893527856534026702}
   - {fileID: 1620630097}
-  - {fileID: 154385158}
   - {fileID: 2592107102963949544}
   - {fileID: 2047186628}
   - {fileID: 2080663654}
@@ -3285,9 +3284,10 @@ SceneRoots:
   - {fileID: 1964929019}
   - {fileID: 866914667}
   - {fileID: 1797670281}
-  - {fileID: 1996196092}
+  - {fileID: 154385158}
   - {fileID: 1534582126}
   - {fileID: 662053682}
   - {fileID: 1533626627}
   - {fileID: 1137876800}
   - {fileID: 1976118943}
+  - {fileID: 1996196092}
