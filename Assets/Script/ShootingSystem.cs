@@ -36,10 +36,9 @@ public class ShootingSystem : MonoBehaviour
         // Mouse Aim
         if (MultiplyBullet)
         {
-            mousePose = minCam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            mousePose = minCam.ScreenToWorldPoint(Input.mousePosition);
             float angle = math.atan2(mousePose.y, mousePose.x) * Mathf.Deg2Rad;
             transform.rotation = Quaternion.AngleAxis(angle + ofset, Vector3.forward);
-
         }
         else
         {
@@ -63,9 +62,14 @@ public class ShootingSystem : MonoBehaviour
             else
             {
                 canFire = false;
-                GameObject b = Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);
-                b.gameObject.GetComponent<BulletScript>().force = force;
-                b.gameObject.GetComponent<BulletScript>().MultiplyBullet = false;
+                GameObject b = Instantiate(MultiplybulletPrefab, bulletTransform.position, bulletTransform.rotation);
+                Rigidbody2D brb = b.GetComponent<Rigidbody2D>();
+                Vector2 dir = transform.rotation * -Vector2.left;
+                Vector2 pdir = Vector2.Perpendicular(dir) * Random.Range(0, 0);
+                brb.velocity = (dir + pdir) * MultiplyGunforce;
+
+                b.gameObject.GetComponent<BulletScript>().force = MultiplyGunforce;
+                b.gameObject.GetComponent<BulletScript>().MultiplyBullet = true;
             }
         }
 

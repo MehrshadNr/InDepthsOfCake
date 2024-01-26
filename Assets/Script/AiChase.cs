@@ -20,7 +20,10 @@ public class AiChase : MonoBehaviour
     {
         if (canMove)
         {
-            distance = Vector2.Distance(transform.position, player.transform.position);
+            if(player != null)
+            {
+                distance = Vector2.Distance(transform.position, player.transform.position);
+            }
             Vector2 direction = player.transform.position - transform.position;
 
             if(!retreat)

@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField]private Slider slider;
     public float maxHealth;
+    public GameObject End;
     private void Start()
     {
         slider.maxValue = maxHealth;
@@ -17,6 +18,13 @@ public class Health : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             TakeDamage(5);
+        }
+
+        if (slider.value == 0)
+        {
+            Debug.Log("end");
+            End.SetActive(true);
+            Destroy(gameObject);
         }
     }
     public void TakeDamage(float damage)
