@@ -10,9 +10,6 @@ public class Spown : MonoBehaviour
     public float temp;
     public float temp2;
 
-    private void Start()
-    {
-    }
     private void Update()
     {
         temp -= time * Time.deltaTime;

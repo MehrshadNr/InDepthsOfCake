@@ -9,6 +9,7 @@ public class UiManager : MonoBehaviour
     public GameObject aaudioSource;
     public AudioClip audio;
     public Animator animator;
+    public int menu;
 
     public void ReStart()
     {
@@ -16,7 +17,7 @@ public class UiManager : MonoBehaviour
     }
     public void BackToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - menu);
     }
 
     public void End()
