@@ -12,6 +12,9 @@ public class kerm : MonoBehaviour
     public float DamageForPlayer;
     public float DamageForEnemy;
 
+
+     float temp = 1;
+
     public bool canMove = true;
     public bool retreat;
 
@@ -50,7 +53,18 @@ public class kerm : MonoBehaviour
         if (col.gameObject.CompareTag("Enemy"))
         {
             col.gameObject.GetComponent<AiHealth>().TakeDamage(DamageForEnemy);
-            //Destroy(gameObject);
+            if(col.gameObject.GetComponent<AiHealth>().hp == 0)
+            {
+                if(temp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    temp--;
+                }
+            }
+
         }
 
         if (col.gameObject.CompareTag("Player"))

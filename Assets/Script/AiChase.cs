@@ -15,7 +15,10 @@ public class AiChase : MonoBehaviour
     public bool retreat;
 
     private float distance;
-
+    private void Start()
+    {
+        player  = GameObject.FindWithTag("Player");
+    }
     private void Update()
     {
         if(player != null)

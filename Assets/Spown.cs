@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spown : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject Player;
     public float time;
      float temp;
      float temp2;
@@ -19,7 +20,7 @@ public class Spown : MonoBehaviour
         temp -= time * Time.deltaTime;
         if (temp <= 0)
         {
-            Instantiate(enemy, transform.position, transform.rotation);
+            GameObject b = Instantiate(enemy, transform.position, transform.rotation);
             temp = temp2;
         }
     }

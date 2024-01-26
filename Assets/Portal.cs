@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     public Timer timer;
+    public PortalSpown portalSpown;
     private void Update()
     {
         if (gameObject.GetComponent<Timer>().seconds == 0)
         {
-            timer.minutes = timer.temp;
+            timer.minutes = 1;
             timer.seconds = 0;
+            portalSpown.canSpown = true;
             Destroy(gameObject);
         }
     }
