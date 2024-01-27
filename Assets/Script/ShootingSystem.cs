@@ -27,8 +27,7 @@ public class ShootingSystem : MonoBehaviour
     public float ofset;
     public float spread;
 
-    //public AudioSource audioSource;
-    //public AudioClip audio;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -58,7 +57,7 @@ public class ShootingSystem : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire)
         {
             //audioSource.clip = audio;
-            //audioSource.Play();
+            audioSource.Play();
             if (MultiplyBullet)
             {
                 _MultiplyBullet();

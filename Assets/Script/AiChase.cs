@@ -16,7 +16,6 @@ public class AiChase : MonoBehaviour
 
     private float distance;
 
-
     private void Start()
     {
         player  = GameObject.FindWithTag("Player");
@@ -55,6 +54,7 @@ public class AiChase : MonoBehaviour
         {
             col.gameObject.GetComponent<Health>().TakeDamage(Damage);
             Destroy(gameObject);
+            gameObject.GetComponent<AiHealth>().dead();
         }
     }
 

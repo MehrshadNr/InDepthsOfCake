@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     public Timer timer;
+    public bool off = false;
     public PortalSpown portalSpown;
     private void Update()
     {
         if (gameObject.GetComponent<Timer>().seconds == 0)
         {
-            timer.minutes = 1;
-            timer.seconds = 0;
-            portalSpown.canSpown = true;
-            Destroy(gameObject);
+            if (!off)
+            {
+                timer.minutes = 1;
+                timer.seconds = 0;
+                portalSpown.canSpown = true;
+                Destroy(gameObject);
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D col)
